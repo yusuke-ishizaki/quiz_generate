@@ -1,11 +1,7 @@
 import streamlit as st
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-# 環境変数からユーザー名とパスワードを取得
-admin_user = os.getenv("ADMIN")
-admin_password = os.getenv("PASSWORD")
+admin_user = st.secrets.ADMIN
+admin_password = st.secrets.PASSWORD
 
 def main():
     st.title("ログイン画面")
