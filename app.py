@@ -42,7 +42,7 @@ if "generation_attempts" not in st.session_state:
 def initialize_llm():
     try:
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.0-flash-lite-preview-02-05",
+            model="gemini-2.0-flash-lite",
             google_api_key=GEMINI_API_KEY,
             temperature=0.9,  # 多様な質問を生成するために温度を上げる
             top_p=0.95,       # より多様な出力を許容
